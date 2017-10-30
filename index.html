@@ -8,15 +8,16 @@
 <body>
 <a-scene>
   <a-assets>
-    <audio id="ambience" src="ambience.mp3"></audio>
     <a-asset-item id="handle-obj" src="handle.obj"></a-asset-item>
     <a-asset-item id="handle-mtl" src="handle.mtl"></a-asset-item>
   </a-assets>
-  <a-entity scale="1 1 1" obj-model="obj: #handle-obj; mtl: #handle-mtl"></a-entity>
-  <a-sky color="#030303"></a-sky>
-  <a-entity position="0 0 0">
-    <a-camera></a-camera>
-  </a-entity>
+ <a-entity scale="0.1 0.1 0.1" obj-model="obj: #handle-obj; mtl: #handle-mtl"
+ animation="property: rotation; dur: 1000;
+                           easing: easeInSine; loop: true; to: 360 0 0"></a-entity>
+ <a-sky src="sky.jpg"></a-sky>
+ <a-entity position="0 0 3.8">
+  <a-camera></a-camera>
+ </a-entity>
 </a-scene>
 </body>
 </html>
